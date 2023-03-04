@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- name代表的实体类名，table代表的是表名 -->
+	<class name="com.seehope.entity.Student" table="student">
+		<!-- name=id代表的Student类中的属性 
+		column=id代表的是table表中的字段 -->
+		<id name="id" column="id">
+			<generator class="native"></generator><!-- 主键生成策略 -->
+		</id>
+		<!-- 其他属性用property标签来映射 -->
+		<property name="studentName" column="studentname" type="string"></property>
+		<property name="gender" column="gender" type="string"></property>		
+		<property name="age" column="age" type="integer"></property>
+		
+	</class>
+</hibernate-mapping>
